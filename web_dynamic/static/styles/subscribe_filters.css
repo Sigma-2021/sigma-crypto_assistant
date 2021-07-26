@@ -1,0 +1,11 @@
+.block {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.block input {
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+    margin-left:1%;
+}

@@ -1,0 +1,67 @@
+h1 {
+    text-align: left;
+    font-size: 30px;
+}
+
+.art {
+    border: 3px solid #c0c0c0;
+    border-radius: 10px;
+    margin-right: 73px;
+    padding: 22px;
+}
+.art img {
+    display: block;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width:400px;
+}
+
+
+.information {
+    margin-left: 5%;
+}
+.information a {
+    margin-left: 5%;
+}
+.information p {
+    margin-left: 5%;
+}
+
+
+.articles a{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.articles {
+    width: 30%;
+    flex-direction: column;
+    text-align:center;
+}
+
+.articles img {
+    width: 100px
+}
+
+.btc {
+    display: flex;
+    position: relative;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 100px;
+}
+
+.articles .coin2 {
+    border: 3px solid #c0c0c0;
+    border-radius: 10px;
+}
+
+.articles .coin3 {
+    border: 3px solid #c0c0c0;
+    border-radius: 10px;
+    margin-top:10%;
+}

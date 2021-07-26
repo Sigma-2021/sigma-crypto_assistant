@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/styles/coins_common.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/coins_filters.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/coins_article.css">
+    <link rel="icon" href="../static/img/small_logo.png" />
+    <title>Sigma</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+	<a href="http://tadeograchstudio.tech/"><img src="../static/img/small_logo_header.png"></a>
+	<a href="http://tadeograchstudio.tech/"><img src="../static/img/just_sigma2.png"></a>
+      </div>
+    </header>
+    <div class="container">
+      <section class="filters">
+	<div class="box1">
+	  <h3>Cryptocurrency</h3>
+	  <h4>&nbsp;</h4>
+	  <div class="popover">
+	    <ul>
+	      <li>
+		<h2>Coins</h2>
+		<ul>
+		  <li><a href="http://tadeograchstudio.tech/bitcoin" style="color:white; text-decoration:none">Bitcoin</a></li>
+		  <li><a href="http://tadeograchstudio.tech/dogecoin" style="color:white; text-decoration:none">Dogecoin</a></li>
+		  <li><a href="http://tadeograchstudio.tech/ethereum" style="color:white; text-decoration:none">Ethereum</a></li>
+		</ul>
+	      </li>
+	    </ul>
+	  </div>
+	</div>
+	<div class="box2">
+	  <h3>Blockchain</h3>
+	  <h4>&nbsp;</h4>
+	  <div class="popover">
+	    <ul>
+	      <li>
+		<h2>Information</h2>
+		<ul>
+		  <li><a href="https://www.investopedia.com/terms/b/blockchain.asp#:~:text=Blockchain%20does%20not%20store%20any,blockchain%20to%20reflect%20the%20change." style="color:white; text-decoration:none">What is a blockchain?</a></li>
+		  <li><a href="https://www.thebalancesmb.com/blockchain-explained-4773366" style="color:white; text-decoration:none">How it works?</a></li>
+		</ul>
+	      </li>
+	    </ul>
+	  </div>
+	</div>
+	<div class="box3">
+	  <a href="http://tadeograchstudio.tech/landing-page" style="color:white; text-decoration:none"><h3>About us</h3></a>
+	</div>
+      </section>
+    </div>
+    <div class="btc">
+      <div class="art">
+	<img src="../static/img/btc_log.png">
+	<div class="information">
+	  {% if btc.porcentaje >= 0 %}
+	  <h3>Price information (last 24hs): +{{ btc.porcentaje }}%</h3>
+	  {% else %}
+	  <h3>Price information (last 24hs): {{ btc.porcentaje }}%</h3>
+	  {% endif %}
+	  <a>Lowest price: U$S{{ btc.menor }}</a>
+	  <a>Actual price: U$S{{ btc.price }}</a>
+	  <a>Highest price: U$S{{ btc.mayor }}</a>
+	  <h3>About Bitcoin</h3>
+	  <p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.</p>
+	  <h3>Official Website</h3>
+	  <a target=”_blank” href="https://bitcoin.org/en/">Click here!</a>
+	  <h3>Official whitepaper</h3>
+	  <a target=”_blank” href="https://bitcoin.org/bitcoin.pdf">Click here!</a>
+	</div>
+      </div>
+      <div class="articles">
+	<div class="coin2">
+	  <a href="/ethereum" style="color:black; text-decoration:none">
+	    <img src="../static/img/ethereum_logo.png">
+	    {% if eth.porcentaje >= 0 %}
+	    <p>ETH (+{{ eth.porcentaje }}%)</p>
+	    {% else %}
+	    <p>ETH ({{ eth.porcentaje }}%)</p>
+	    {% endif %}
+	    <p>U$S{{ eth.price }}</p>
+	  </a>
+	</div>
+	<div class="coin3">
+	  <a href="/dogecoin" style="color:black; text-decoration:none">
+	    <img src="../static/img/doge_log.png">
+	    {% if doge.porcentaje >= 0 %}
+	    <p>DOGE (+{{ doge.porcentaje }}%)</p>
+	    {% else %}
+	    <p>DOGE ({{ doge.porcentaje }}%)</p>
+	    {% endif %}
+	    <p>U$S{{ doge.price }}</p>
+	  </a>
+	</div>
+      </div>
+    </div>
+    <footer>
+      <p></p>
+    </footer>
+  </body>
+</html>
